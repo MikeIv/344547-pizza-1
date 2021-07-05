@@ -26,7 +26,12 @@
             <div class="sheet">
               <h2 class="title title--small sheet__title">Выберите тесто</h2>
               <div class="sheet__content dough">
-                <label class="dough__input dough__input--light">
+                <label
+                  v-for="(paste, name) in dough"
+                  :key="name"
+                  :title="paste.name"
+                  class="dough__input dough__input--light"
+                >
                   <input
                     type="radio"
                     name="dought"
@@ -34,18 +39,8 @@
                     class="visually-hidden"
                     checked
                   />
-                  <b>Тонкое</b>
-                  <span>Из твердых сортов пшеницы</span>
-                </label>
-                <label class="dough__input dough__input--large">
-                  <input
-                    type="radio"
-                    name="dought"
-                    value="large"
-                    class="visually-hidden"
-                  />
-                  <b>Толстое</b>
-                  <span>Из твердых сортов пшеницы</span>
+                  <b>{{ paste.name }}</b>
+                  <span>{{ paste.description }}</span>
                 </label>
               </div>
             </div>
@@ -54,33 +49,20 @@
             <div class="sheet">
               <h2 class="title title--small sheet__title">Выберите размер</h2>
               <div class="sheet__content diameter">
-                <label class="diameter__input diameter__input--small">
+                <label
+                  v-for="(size, name) in sizes"
+                  :key="name"
+                  :title="size.name"
+                  :class="size.icon"
+                  class="diameter__input"
+                >
                   <input
                     type="radio"
                     name="diameter"
                     value="small"
                     class="visually-hidden"
                   />
-                  <span>23 см</span>
-                </label>
-                <label class="diameter__input diameter__input--normal">
-                  <input
-                    type="radio"
-                    name="diameter"
-                    value="normal"
-                    class="visually-hidden"
-                    checked
-                  />
-                  <span>32 см</span>
-                </label>
-                <label class="diameter__input diameter__input--big">
-                  <input
-                    type="radio"
-                    name="diameter"
-                    value="big"
-                    class="visually-hidden"
-                  />
-                  <span>45 см</span>
+                  <span>{{ size.name }}</span>
                 </label>
               </div>
             </div>
@@ -93,13 +75,14 @@
               <div class="sheet__content ingridients">
                 <div class="ingridients__sauce">
                   <p>Основной соус:</p>
-                  <label class="radio ingridients__input">
+                  <label
+                    v-for="(sauce, name) in sauces"
+                    :key="name"
+                    :title="sauce.name"
+                    class="radio ingridients__input"
+                  >
                     <input type="radio" name="sauce" value="tomato" checked />
-                    <span>Томатный</span>
-                  </label>
-                  <label class="radio ingridients__input">
-                    <input type="radio" name="sauce" value="creamy" />
-                    <span>Сливочный</span>
+                    <span>{{ sauce.name }}</span>
                   </label>
                 </div>
                 <div class="ingridients__filling">
@@ -107,13 +90,13 @@
                   <ul class="ingridients__list">
                     <li
                       class="ingridients__item"
-                      v-for="(fill, index) in filling"
-                      :key="index"
-                      :class="fill.icon"
-                      :title="fill.title"
+                      v-for="(ingredient, name) in ingredients"
+                      :key="name"
+                      :class="ingredient.icon"
+                      :title="ingredient.name"
                     >
-                      <span class="filling" :class="fill.icon">{{
-                        fill.title
+                      <span class="filling" :class="ingredient.icon">{{
+                        ingredient.name
                       }}</span>
                       <div class="counter counter--orange ingridients__counter">
                         <button
@@ -177,13 +160,21 @@
 </template>
 
 <script>
-// Импортируем JSON данные и статусы для фильтров.
+// Импортируем JSON данные.
 import filling from "@/static/filling.json";
+import ingredients from "@/static/ingredients.json";
+import dough from "@/static/dough.json";
+import sizes from "@/static/sizes.json";
+import sauces from "@/static/sauces.json";
 
 export default {
   name: "Index",
   data: () => ({
     filling,
+    ingredients,
+    dough,
+    sizes,
+    sauces,
   }),
 };
 </script>

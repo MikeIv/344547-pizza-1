@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "icon": "filling--mushrooms",
+    "title": "Грибы"
+  },
+  {
+    "id": 2,
+    "icon": "filling--cheddar",
+    "title": "Чеддер"
+  },
+  {
+    "id": 3,
+    "icon": "filling--salami",
+    "title": "Салями"
+  },
+  {
+    "id": 4,
+    "icon": "filling--ham",
+    "title": "Ветчина"
+  },
+  {
+    "id": 5,
+    "icon": "filling--ananas",
+    "title": "Ананас"
+  },
+  {
+    "id": 6,
+    "icon": "filling--bacon",
+    "title": "Бекон"
+  },
+  {
+    "id": 7,
+    "icon": "filling--onion",
+    "title": "Лук"
+  },
+  {
+    "id": 8,
+    "icon": "filling--chile",
+    "title": "Чили"
+  },
+  {
+    "id": 9,
+    "icon": "filling--jalapeno",
+    "title": "Халапеньо"
+  },
+  {
+    "id": 10,
+    "icon": "filling--olives",
+    "title": "Маслины"
+  },
+  {
+    "id": 11,
+    "icon": "filling--tomatoes",
+    "title": "Томаты"
+  },
+  {
+    "id": 12,
+    "icon": "filling--salmon",
+    "title": "Лосось"
+  },
+  {
+    "id": 13,
+    "icon": "filling--mozzarella",
+    "title": "Моцарелла"
+  },
+  {
+    "id": 14,
+    "icon": "filling--parmesan",
+    "title": "Пармезан"
+  },
+  {
+    "id": 15,
+    "icon": "filling--blue_cheese",
+    "title": "Блю чиз"
+  }
+]

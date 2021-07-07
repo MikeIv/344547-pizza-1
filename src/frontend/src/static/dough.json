@@ -1,13 +1,15 @@
 [
   {
     "name": "Тонкое",
-    "image": "/public/img/dough-light.svg",
+    "value": "light",
+    "image": "dough__input--light",
     "description": "Из твердых сортов пшеницы",
     "price": 300
   },
   {
     "name": "Толстое",
-    "image": "/public/img/dough-large.svg",
+    "value": "large",
+    "image": "dough__input--large",
     "description": "Из твердых сортов пшеницы",
     "price": 300
   }

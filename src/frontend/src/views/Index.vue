@@ -29,13 +29,13 @@
                 <label
                   v-for="(paste, name) in dough"
                   :key="name"
-                  :title="paste.name"
-                  class="dough__input dough__input--light"
+                  :class="paste.image"
+                  class="dough__input"
                 >
                   <input
                     type="radio"
                     name="dought"
-                    value="light"
+                    :value="paste.value"
                     class="visually-hidden"
                     checked
                   />
@@ -59,7 +59,7 @@
                   <input
                     type="radio"
                     name="diameter"
-                    value="small"
+                    :value="size.value"
                     class="visually-hidden"
                   />
                   <span>{{ size.name }}</span>
@@ -81,7 +81,12 @@
                     :title="sauce.name"
                     class="radio ingridients__input"
                   >
-                    <input type="radio" name="sauce" value="tomato" checked />
+                    <input
+                      type="radio"
+                      name="sauce"
+                      :value="sauce.value"
+                      checked
+                    />
                     <span>{{ sauce.name }}</span>
                   </label>
                 </div>
